@@ -1,10 +1,10 @@
 /* Variables for Colors and Fonts */
 :root {
-    --primary-color: #FF6F61;       /* Salmon Pink */
-    --secondary-color: #FFA07A;     /* Light Salmon */
-    --accent-color: #FFDAB9;        /* Peach Puff */
-    --light-color: #FFF5EE;         /* Seashell (Soft Peach Background) */
-    --dark-color: #8B3E2F;          /* Dark Salmon */
+    --primary-color: #1b4965;       /* Dark Navy Blue */
+    --secondary-color: #62b6cb;     /* Light Blue */
+    --accent-color: #5fa8d3;        /* Blue Accent */
+    --light-color: #bee9e8;         /* Mint Blue Background */
+    --extra-light-color: #cae9ff;   /* Pale Blue */
     --font-family: 'Montserrat', sans-serif;
 }
 
