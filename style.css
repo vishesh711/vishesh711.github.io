@@ -26,6 +26,18 @@ body {
     background-color: var(--light-color);
 }
 
+/* Visually Hidden Class for Accessibility */
+.visually-hidden { 
+    position: absolute; 
+    width: 1px; 
+    height: 1px; 
+    padding: 0; 
+    margin: -1px; 
+    overflow: hidden; 
+    clip: rect(0,0,0,0); 
+    border: 0; 
+}
+
 /* Container */
 .container {
     width: 90%;
@@ -415,6 +427,7 @@ section h2::after {
 
 .contact-info {
     flex: 0 0 40%;
+    padding: 20px; /* Added padding to shift content away from borders */
 }
 
 .contact-info h3 {
@@ -440,10 +453,6 @@ section h2::after {
 }
 
 /* Social Media Icons */
-.social-links {
-    margin-top: 20px;
-}
-
 .social-links {
     margin-top: 20px;
     display: flex;
@@ -473,6 +482,14 @@ section h2::after {
     text-align: center;             /* Center the icon text */
     vertical-align: middle;         /* Align the icon vertically */
 }
+
+
+/* Optional hover effect */
+.social-links a:hover {
+    background: var(--light-color); /* Lighter color on hover */
+    transform: scale(1.1);          /* Slight scaling effect */
+}
+
 
 #contact-form {
     flex: 0 0 55%;
@@ -563,6 +580,16 @@ footer p {
         flex-direction: column;
         width: 100%;
         background: rgba(13, 27, 42, 0.9);
+    }
+
+    nav ul.show-menu {
+        display: flex;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
     }
 
     nav ul li {
