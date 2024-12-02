@@ -444,24 +444,34 @@ section h2::after {
     margin-top: 20px;
 }
 
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: left; /* Align circles horizontally within the parent container */
+    gap: 10px;               /* Add spacing between the circles */
+}
+
 .social-links a {
-    background: var(--accent-color);
-    padding: 15px;
-    margin-right: 10px;
-    border-radius: 50%;
-    text-decoration: none;
-    font-size: 1.5em;
-    display: inline-block;
-    transition: background 0.3s, color 0.3s;
+    background: var(--accent-color); /* Background color of the circle */
+    width: 50px;                    /* Circle width */
+    height: 50px;                   /* Circle height */
+    border-radius: 50%;             /* Make the container a perfect circle */
+    display: flex;                  /* Use Flexbox for centering */
+    justify-content: center;        /* Center the icon horizontally */
+    align-items: center;            /* Center the icon vertically */
+    text-decoration: none;          /* Remove underline for links */
+    transition: background 0.3s, transform 0.3s; /* Add a hover effect */
+    overflow: hidden;               /* Prevent any content overflow */
 }
 
 .social-links a i {
-    color: #fff; /* Ensure icons are white */
-    line-height: 1;
-}
-
-.social-links a:hover {
-    background: var(--light-color);
+    color: #fff;                    /* Icon color */
+    font-size: 1.6em;               /* Adjust the size of the icon */
+    margin: 0;                      /* Remove any default margin */
+    line-height: 1;                 /* Prevent extra vertical spacing */
+    display: inline-block;          /* Ensure the icon aligns correctly */
+    text-align: center;             /* Center the icon text */
+    vertical-align: middle;         /* Align the icon vertically */
 }
 
 #contact-form {
