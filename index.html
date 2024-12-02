@@ -10,6 +10,28 @@
     <meta name="description" content="Vishesh Kumar - Data Scientist specializing in Machine Learning, AI, and Data Analysis. Explore my projects and get in touch.">
     <meta name="keywords" content="Vishesh Kumar, Data Scientist, Machine Learning, AI, Data Analysis, Portfolio">
 
+    <!-- Open Graph Meta Tags for SEO and Social Media -->
+    <meta property="og:title" content="Vishesh Kumar | Data Scientist">
+    <meta property="og:description" content="Vishesh Kumar - Data Scientist specializing in Machine Learning, AI, and Data Analysis. Explore my projects and get in touch.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Vishesh Kumar",
+      "jobTitle": "Data Scientist",
+      "url": "https://yourwebsite.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/vishesh71/",
+        "https://github.com/vishesh711"
+      ]
+    }
+    </script>
+
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
@@ -42,7 +64,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <!-- Hamburger Menu for Mobile -->
-            <div class="menu-toggle" id="mobile-menu">
+            <div class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation menu" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
@@ -67,7 +89,7 @@
                 <div class="skill" data-aos="zoom-in" data-aos-delay="100">
                     <i class="fas fa-code"></i>
                     <h3>Programming Languages</h3>
-                    <p>Python, R, SQL, MATLAB, C, C++</p>
+                    <p>Python, R, SQL, MATLAB, SAAS</p>
                 </div>
                 <!-- Skill 2 -->
                 <div class="skill" data-aos="zoom-in" data-aos-delay="200">
@@ -135,7 +157,7 @@
                                 <li>Conducted extensive testing to ensure scalability and reliability.</li>
                             </ul>
                         </p>
-                        <a href="#" class="btn">Read More</a>
+                        <a href="https://github.com/vishesh711/Development-of-a-Long-Context-Transformer-within-RAG-for-Enhanced-Document-Understanding" class="btn" target="_blank">Read More</a>
                     </div>
                 </div>
                 <!-- Project 2 -->
@@ -155,27 +177,27 @@
                                 <li>Collaborated with stakeholders to align the system with business needs.</li>
                             </ul>
                         </p>
-                        <a href="#" class="btn">Read More</a>
+                        <a href="https://github.com/vishesh711/RestoDB-Digital-Ordering-and-Payment-System-for-Restaurants" class="btn" target="_blank">Read More</a>
                     </div>
                 </div>
                 <!-- Project 3 -->
                 <div class="project-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="project-info">
-                        <h3>Predictive Modeling for Car Prices</h3>
+                        <h3>RAG-Base: Private Chat with Your Documents</h3>
                         <p><em>Aug 2023 - Dec 2023</em></p>
                         <p>
-                            Engineered a predictive model to estimate car prices based on various features, explaining 91.74% of the variance in car prices. The model utilized advanced regression techniques and feature selection methods to enhance accuracy.
+                            Developed a fully local Retrieval-Augmented Generation (RAG) system with a chatbot interface, enabling secure interactions with personal documents. The system ensured complete data privacy while delivering efficient and accurate responses.
                         </p>
                         <p>
                             <strong>Key Contributions:</strong>
                             <ul>
-                                <li>Collected and cleaned data from multiple sources to ensure data integrity.</li>
-                                <li>Performed exploratory data analysis to identify significant predictors.</li>
-                                <li>Implemented machine learning algorithms using Python libraries such as scikit-learn.</li>
-                                <li>Validated the model using cross-validation techniques and improved performance metrics.</li>
+                                <li>Built a local RAG pipeline, eliminating reliance on external servers for enhanced privacy.</li>
+                                <li>Implemented semantic vector-based retrieval to optimize document search and ranking.</li>
+                                <li>Integrated a Question Answering (QA) chain to provide context-aware and precise answers.</li>
+                                <li>Designed a user-friendly chatbot interface using Streamlit for seamless interaction.</li>
                             </ul>
                         </p>
-                        <a href="#" class="btn">Read More</a>
+                        <a href="https://github.com/vishesh711/RAG-Base" class="btn" target="_blank" rel="noopener noreferrer">Read More</a>
                     </div>
                 </div>
                 <!-- Project 4 -->
@@ -195,7 +217,7 @@
                                 <li>Visualized predictions versus actual stock prices to demonstrate model effectiveness.</li>
                             </ul>
                         </p>
-                        <a href="#" class="btn">Read More</a>
+                        <a href="https://github.com/vishesh711/stock-market-prediction" class="btn" target="_blank">Read More</a>
                     </div>
                 </div>
             </div>
@@ -284,14 +306,20 @@
                     <p><i class="fas fa-phone"></i> +1 (631) 633-1439</p>
                     <p><i class="fas fa-envelope"></i> <a href="mailto:vishesh.kumar.1@stonybrook.edu">vishesh.kumar.1@stonybrook.edu</a></p>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/vishesh71/"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/vishesh711"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/vishesh71/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/vishesh711" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 <form id="contact-form">
+                    <label for="name" class="visually-hidden">Your Name</label>
                     <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    
+                    <label for="email" class="visually-hidden">Your Email</label>
                     <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    
+                    <label for="message" class="visually-hidden">Your Message</label>
                     <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    
                     <button type="submit" class="btn">Send Message</button>
                 </form>
             </div>
