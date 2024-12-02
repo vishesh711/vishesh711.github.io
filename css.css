@@ -1,10 +1,12 @@
 /* Variables for Colors and Fonts */
 :root {
-    --primary-color: #1b4965;       /* Dark Navy Blue */
-    --secondary-color: #62b6cb;     /* Light Blue */
-    --accent-color: #5fa8d3;        /* Blue Accent */
-    --light-color: #bee9e8;         /* Mint Blue Background */
-    --extra-light-color: #cae9ff;   /* Pale Blue */
+    --primary-color: #0d1b2a;       /* Dark Navy Blue */
+    --secondary-color: #1b263b;     /* Dark Blue */
+    --accent-color: #415a77;        /* Gray Blue */
+    --light-color: #778da9;         /* Light Gray Blue */
+    --extra-light-color: #e0e1dd;   /* Light Gray */
+    --dark-color: #0d1b2a;          /* Dark Navy Blue */
+    --light-text-color: #e0e1dd;    /* Light Gray */
     --font-family: 'Montserrat', sans-serif;
 }
 
@@ -35,7 +37,7 @@ body {
 
 /* Navigation Menu */
 nav {
-    background: rgba(255, 111, 97, 0.9); /* Using --primary-color with transparency */
+    background: rgba(13, 27, 42, 0.9); /* Using --primary-color with transparency */
     color: #fff;
     position: fixed;
     width: 100%;
@@ -122,7 +124,7 @@ header {
 
 header::after {
     content: '';
-    background: rgba(255, 111, 97, 0.6); /* Dark overlay using --primary-color */
+    background: rgba(13, 27, 42, 0.6); /* Dark overlay using --primary-color */
     position: absolute;
     top: 0;
     bottom: 0;
@@ -143,7 +145,7 @@ header h1 {
 }
 
 header h1 span {
-    color: var(--accent-color);
+    color: #fff; /* Changed color to white for better contrast */
 }
 
 header p {
@@ -153,7 +155,7 @@ header p {
 
 header a.btn {
     background: var(--accent-color);
-    color: var(--dark-color);
+    color: #fff;
     padding: 15px 40px;
     text-decoration: none;
     font-size: 1.2em;
@@ -163,7 +165,7 @@ header a.btn {
 
 header a.btn:hover {
     background: var(--light-color);
-    color: var(--dark-color);
+    color: #fff;
 }
 
 /* Section Styling */
@@ -240,12 +242,7 @@ section h2::after {
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s;
-}
-
-.project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+    padding-top: 20px; /* Added padding since images are removed */
 }
 
 .project-info {
@@ -266,7 +263,7 @@ section h2::after {
 
 .project-card a.btn {
     background: var(--accent-color);
-    color: var(--dark-color);
+    color: #fff;
     padding: 10px 30px;
     text-decoration: none;
     font-size: 1em;
@@ -276,7 +273,7 @@ section h2::after {
 
 .project-card a.btn:hover {
     background: var(--light-color);
-    color: var(--dark-color);
+    color: #fff;
 }
 
 .project-card:hover {
@@ -319,7 +316,7 @@ section h2::after {
     top: 20px;
     right: -35px;
     background: var(--accent-color);
-    color: var(--dark-color);
+    color: #fff;
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -442,24 +439,29 @@ section h2::after {
     text-decoration: none;
 }
 
+/* Social Media Icons */
 .social-links {
     margin-top: 20px;
 }
 
 .social-links a {
-    color: var(--dark-color);
     background: var(--accent-color);
-    padding: 10px;
+    padding: 15px;
     margin-right: 10px;
     border-radius: 50%;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.5em;
+    display: inline-block;
     transition: background 0.3s, color 0.3s;
+}
+
+.social-links a i {
+    color: #fff; /* Ensure icons are white */
+    line-height: 1;
 }
 
 .social-links a:hover {
     background: var(--light-color);
-    color: var(--dark-color);
 }
 
 #contact-form {
@@ -480,7 +482,7 @@ section h2::after {
 #contact-form button {
     display: inline-block;
     background: var(--accent-color);
-    color: var(--dark-color);
+    color: #fff;
     padding: 15px 40px;
     text-decoration: none;
     font-size: 1.2em;
@@ -491,13 +493,13 @@ section h2::after {
 
 #contact-form button:hover {
     background: var(--light-color);
-    color: var(--dark-color);
+    color: #fff;
 }
 
 /* Footer Styling */
 footer {
     text-align: center;
-    background: var(--dark-color);
+    background: var(--primary-color);
     color: #fff;
     padding: 20px 0;
 }
@@ -550,7 +552,7 @@ footer p {
         display: none;
         flex-direction: column;
         width: 100%;
-        background: rgba(255, 111, 97, 0.9);
+        background: rgba(13, 27, 42, 0.9);
     }
 
     nav ul li {
