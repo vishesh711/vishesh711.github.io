@@ -1,12 +1,9 @@
 /* Variables for Colors and Fonts */
 :root {
-    --primary-color: #0d1b2a;       /* Dark Navy Blue */
-    --secondary-color: #1b263b;     /* Dark Blue */
-    --accent-color: #415a77;        /* Gray Blue */
-    --light-color: #778da9;         /* Light Gray Blue */
-    --extra-light-color: #e0e1dd;   /* Light Gray */
-    --dark-color: #0d1b2a;          /* Dark Navy Blue */
-    --light-text-color: #e0e1dd;    /* Light Gray */
+    --primary-color: #8D7B68;       /* Darkest */
+    --secondary-color: #A4907C;     /* Dark */
+    --accent-color: #C8B6A6;        /* Medium */
+    --light-color: #F1DEC9;         /* Lightest */
     --font-family: 'Montserrat', sans-serif;
 }
 
@@ -21,7 +18,7 @@
 body {
     font-family: var(--font-family);
     line-height: 1.6;
-    color: var(--dark-color);
+    color: var(--primary-color);
     scroll-behavior: smooth;
     background-color: var(--light-color);
 }
@@ -49,7 +46,7 @@ body {
 
 /* Navigation Menu */
 nav {
-    background: rgba(13, 27, 42, 0.9); /* Using --primary-color with transparency */
+    background: rgba(165, 144, 124, 0.9); /* using --secondary-color with transparency */
     color: #fff;
     position: fixed;
     width: 100%;
@@ -58,7 +55,7 @@ nav {
 }
 
 nav.scrolled {
-    background: var(--primary-color);
+    background: var(--secondary-color);
 }
 
 nav .container {
@@ -136,7 +133,7 @@ header {
 
 header::after {
     content: '';
-    background: rgba(13, 27, 42, 0.6); /* Dark overlay using --primary-color */
+    background: rgba(141, 123, 104, 0.6); /* overlay using --primary-color */
     position: absolute;
     top: 0;
     bottom: 0;
@@ -157,7 +154,7 @@ header h1 {
 }
 
 header h1 span {
-    color: #fff; /* Changed color to white for better contrast */
+    color: #fff;
 }
 
 header p {
@@ -176,7 +173,7 @@ header a.btn {
 }
 
 header a.btn:hover {
-    background: var(--light-color);
+    background: var(--secondary-color);
     color: #fff;
 }
 
@@ -189,7 +186,7 @@ section {
 section h2 {
     text-align: center;
     font-size: 2.5em;
-    color: var(--dark-color);
+    color: var(--primary-color);
     margin-bottom: 60px;
     position: relative;
 }
@@ -228,11 +225,12 @@ section h2::after {
 .skill h3 {
     font-size: 1.5em;
     margin-bottom: 15px;
+    color: var(--primary-color);
 }
 
 .skill p {
     font-size: 1em;
-    color: var(--dark-color);
+    color: var(--primary-color);
 }
 
 .skill:hover {
@@ -254,7 +252,7 @@ section h2::after {
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s;
-    padding-top: 20px; /* Added padding since images are removed */
+    padding-top: 20px;
 }
 
 .project-info {
@@ -264,13 +262,13 @@ section h2::after {
 .project-info h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
-    color: var(--dark-color);
+    color: var(--primary-color);
 }
 
 .project-info p {
     font-size: 1em;
     margin-bottom: 15px;
-    color: var(--dark-color);
+    color: var(--primary-color);
 }
 
 .project-card a.btn {
@@ -284,7 +282,7 @@ section h2::after {
 }
 
 .project-card a.btn:hover {
-    background: var(--light-color);
+    background: var(--secondary-color);
     color: #fff;
 }
 
@@ -350,13 +348,13 @@ section h2::after {
 .timeline-content h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
-    color: var(--dark-color);
+    color: var(--primary-color);
 }
 
 .timeline-content p {
     font-size: 1em;
     margin-bottom: 10px;
-    color: var(--dark-color);
+    color: var(--primary-color);
 }
 
 .timeline-content ul {
@@ -367,7 +365,7 @@ section h2::after {
     margin-bottom: 10px;
     position: relative;
     padding-left: 20px;
-    color: var(--dark-color);
+    color: var(--primary-color);
 }
 
 .timeline-content ul li::before {
@@ -406,12 +404,12 @@ section h2::after {
 .education-item h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
-    color: var(--dark-color);
+    color: var(--primary-color);
 }
 
 .education-item p {
     font-size: 1em;
-    color: var(--dark-color);
+    color: var(--primary-color);
 }
 
 .education-item:hover {
@@ -427,19 +425,19 @@ section h2::after {
 
 .contact-info {
     flex: 0 0 40%;
-    padding: 20px; /* Added padding to shift content away from borders */
+    padding: 20px;
 }
 
 .contact-info h3 {
     font-size: 1.8em;
     margin-bottom: 20px;
-    color: var(--dark-color);
+    color: var(--primary-color);
 }
 
 .contact-info p {
     font-size: 1em;
     margin-bottom: 15px;
-    color: var(--dark-color);
+    color: var(--primary-color);
 }
 
 .contact-info i {
@@ -448,7 +446,7 @@ section h2::after {
 }
 
 .contact-info a {
-    color: var(--dark-color);
+    color: var(--primary-color);
     text-decoration: none;
 }
 
@@ -456,38 +454,36 @@ section h2::after {
 .social-links {
     margin-top: 20px;
     display: flex;
-    justify-content: left; /* Align circles horizontally within the parent container */
-    gap: 10px;               /* Add spacing between the circles */
+    justify-content: left; 
+    gap: 10px;
 }
 
 .social-links a {
-    background: var(--accent-color); /* Background color of the circle */
-    width: 50px;                    /* Circle width */
-    height: 50px;                   /* Circle height */
-    border-radius: 50%;             /* Make the container a perfect circle */
-    display: flex;                  /* Use Flexbox for centering */
-    justify-content: center;        /* Center the icon horizontally */
-    align-items: center;            /* Center the icon vertically */
-    text-decoration: none;          /* Remove underline for links */
-    transition: background 0.3s, transform 0.3s; /* Add a hover effect */
-    overflow: hidden;               /* Prevent any content overflow */
+    background: var(--accent-color); 
+    width: 50px;                   
+    height: 50px;                  
+    border-radius: 50%;            
+    display: flex;                 
+    justify-content: center;       
+    align-items: center;           
+    text-decoration: none;         
+    transition: background 0.3s, transform 0.3s; 
+    overflow: hidden;              
 }
 
 .social-links a i {
-    color: #fff;                    /* Icon color */
-    font-size: 1.6em;               /* Adjust the size of the icon */
-    margin: 0;                      /* Remove any default margin */
-    line-height: 1;                 /* Prevent extra vertical spacing */
-    display: inline-block;          /* Ensure the icon aligns correctly */
-    text-align: center;             /* Center the icon text */
-    vertical-align: middle;         /* Align the icon vertically */
+    color: #fff;                   
+    font-size: 1.6em;              
+    margin: 0;                     
+    line-height: 1;                
+    display: inline-block;         
+    text-align: center;            
+    vertical-align: middle;        
 }
 
-
-/* Optional hover effect */
 .social-links a:hover {
-    background: var(--light-color); /* Lighter color on hover */
-    transform: scale(1.1);          /* Slight scaling effect */
+    background: var(--secondary-color);
+    transform: scale(1.1);
 }
 
 
@@ -503,7 +499,7 @@ section h2::after {
     border: 1px solid #ccc;
     border-radius: 50px;
     background-color: #fff;
-    color: var(--dark-color);
+    color: var(--primary-color);
 }
 
 #contact-form button {
@@ -519,14 +515,14 @@ section h2::after {
 }
 
 #contact-form button:hover {
-    background: var(--light-color);
+    background: var(--secondary-color);
     color: #fff;
 }
 
 /* Footer Styling */
 footer {
     text-align: center;
-    background: var(--primary-color);
+    background: var(--secondary-color);
     color: #fff;
     padding: 20px 0;
 }
@@ -579,7 +575,7 @@ footer p {
         display: none;
         flex-direction: column;
         width: 100%;
-        background: rgba(13, 27, 42, 0.9);
+        background: rgba(165, 144, 124, 0.9);
     }
 
     nav ul.show-menu {
