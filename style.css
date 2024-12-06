@@ -242,6 +242,7 @@ section h2::after {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: stretch; /* Ensure cards align vertically */
 }
 
 .project-card {
@@ -251,12 +252,18 @@ section h2::after {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column; /* Allows pushing button to bottom */
+    padding: 20px;
     transition: transform 0.3s;
-    padding-top: 20px;
+    /* If needed, enforce a min-height to ensure uniform card size */
+    /* min-height: 650px; */
 }
 
 .project-info {
-    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-info h3 {
@@ -271,6 +278,11 @@ section h2::after {
     color: var(--primary-color);
 }
 
+.project-info ul {
+    margin-bottom: 20px;
+    flex: 1;
+}
+
 .project-card a.btn {
     background: var(--accent-color);
     color: #fff;
@@ -279,6 +291,8 @@ section h2::after {
     font-size: 1em;
     border-radius: 50px;
     transition: background 0.3s, color 0.3s;
+    margin-top: auto; /* Push the button to the bottom within the card */
+    align-self: start;
 }
 
 .project-card a.btn:hover {
@@ -485,7 +499,6 @@ section h2::after {
     background: var(--secondary-color);
     transform: scale(1.1);
 }
-
 
 #contact-form {
     flex: 0 0 55%;
